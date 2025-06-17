@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="exercice.js" />
+  </head>
+  <body>
+    <!-- <section>
+        <script>
+            let uneQuestion = prompt("Dis moi soit bonjour soit tu vas bien ?...");
+            if (uneQuestion === "bonjour"){
+                alert ("Bonjour à toi");
+            } else if (uneQuestion === "tu vas bien ?"){
+                alert ("ca va et toi");
+            } else {
+                alert ("désolé j'ai pas compris")
+            }
+
+        </script>
+    </section> -->
+    <!-- <section>
+        <script>
+            let uneQuestion = prompt ("Dis moi ou bonjour!");
+            if (uneQuestion === "bonjour"){
+                let questionDeux = prompt ("Bonjour, ca va?");
+                    if (questionDeux === "oui"){
+                        alert ("Je suis content pour toi")
+                    } 
+            else {
+                alert ("Désolé, il faut que je file")
+                 }
+            }              
+        </script>
+    </section> -->
+
+    <section>
+      <script>
+        let uneQuestion = prompt(
+          "Dis moi ou bonjour (vous ne pouvez dire que bonjour)"
+        );
+        if (uneQuestion !== "bonjour") {
+          alert("Au revoir dans ce cas!");
+        }
+        if (uneQuestion === "bonjour") {
+          let questionDeux = prompt("Bonjour, ca va?");
+
+          if (questionDeux === "oui") {
+            let questionDeuxOui = prompt(
+              "Que vas tu faire aujourd'hui? Vas tu 1 travailler ou 2 te détendre"
+            );
+
+            if (questionDeuxOui === "1") {
+              alert("bon travail!");
+            }
+            if (questionDeuxOui === "2") {
+              alert("détend toi bien");
+            } else {
+              alert("Ciao!");
+            }
+          }
+          if (questionDeux === "non") {
+            let questionDeuxNon = prompt("Ah Bon? Pourquoi? Tu as mal dormi ?");
+
+            if (questionDeuxNon === "oui") {
+              let questionDodo = prompt("un cauchemar?");
+            }
+            if (questionDeuxNon === "non") {
+              alert("D'accord, passe une bonne journée quand même");
+            }
+
+            if (questionDodo === "oui") {
+              alert("vas te reposer aujourd'hui");
+            }
+            
+          } else {
+            alert("ok bye");
+          }
+        } else {
+          alert("Désolé, il faut que je file");
+        }
+      </script>
+    </section>
+  </body>
+</html>
