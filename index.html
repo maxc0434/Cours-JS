@@ -4,9 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="exercice.js" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+    <header class="headerMenu"> 
+      <div class="headerBox">
+        <div>
+          <img src="" alt="logo">
+        </div>
+        <div>
+          <nav>
+            <ul class="linkMenu">
+              <li><a href="">accueil</a> </li>
+              <li><a href="">service</a> </li>
+              <li><a href="">produit</a> </li>
+              <li><a href="">contact</a> </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    </header>
+
+    <main> 
+      <div>
+
+      </div>
+
+      <section class="section1">
+        <div class="boxSection1"></div>
+        <div class="boxSection1"></div>
+      </section>
+      <section class="section2">
+        <div class="boxSection2"></div>
+        <div class="boxSection2"></div>
+        <div class="boxSection2"></div>
+      </section>
+
+      <section class="section3">
+        <div class="boxSection3"></div>
+      </section>
+      <section class="section4">
+        <div class="boxSection4"></div>
+        <div class="boxSection4"></div>
+        <div class="boxSection4"></div>
+        <div class="boxSection4"></div>
+      </section>
+    </main>
+
     <!-- <section>
         <script>
             let uneQuestion = prompt("Dis moi soit bonjour soit tu vas bien ?...");
@@ -20,6 +66,9 @@
 
         </script>
     </section> -->
+
+
+
     <!-- <section>
         <script>
             let uneQuestion = prompt ("Dis moi ou bonjour!");
@@ -84,6 +133,8 @@
       </script>
     </section> -->
 
+
+
     <!-- <section>
 
       for(i=1; i<200; i++){
@@ -107,7 +158,8 @@
       </script>
     </section> -->
 
-        <section>
+
+  <!-- <section>
 
       <script>
 // FONCTION DIVISER PAR 2
@@ -116,24 +168,56 @@
 // }
 // console.log(diviserParDeux(10))
 
-
 // let resultat = diviserParDeux(10);
 // console.log (resultat)
 
 // FONCTION DIVISER PAR 2 (n)
+
 // function diviserParDeux(nombre){
 //         return nombre/2
 // }
-// var n = Math.random();
-// console.log ("montre moi le chiffre choisi " + n)
-// let resultat = diviserParDeux(n)
+// let n = Math.random();
+// console.log ("le chiffre choisi " + n)
+// let resultat = diviserParDeux(n);
 // console.log (resultat)
+     </script>
+   </section> -->
 
-// FONCTION SOMME 
+  
+  
+    <section>
 
 
+<!-- <script>
+function nombreMystere() {
+let n = Math.floor(Math.random()*100);
+console.log (n)
 
-      </script>
+
+for (i=0; i<10; i++){
+  let essai = Number (prompt ("choisi un chiffre"));
+
+  if (essai===n) {
+    alert ("Bravo")
+    return;
+  }
+
+  else if (essai<n){
+    alert ("plus grand! Essaie encore") 
+  } 
+  else {
+    alert ("plus petit! Essaie encore")
+  }
+
+}
+alert ("Perdu, vous avez utilisé tous vos essais. Le nombre secret était " + n + ".")
+}
+nombreMystere();
+</script> -->
+
+
     </section>
   </body>
+
+  <script src="javascript/exercice.js"></script>
 </html>

@@ -1,0 +1,75 @@
+*{ 
+    margin: 0; /*marge externe */
+    padding: 0; /*marge interne */
+    box-sizing: border-box; /* indique qu'on inclu les marges internes et les bordures dans la taille du parent*/
+
+}
+/*-------------------------------------------------------- HEADER -----------------------------------------------------*/
+
+.headerMenu{
+    height: 100px;
+    background-color: brown;
+}
+.headerBox{
+    display: flex;
+    justify-content: space-between;
+}
+.linkMenu{
+    display: flex;
+    
+}
+ul li{
+    list-style-type: none;
+    padding: 10px; 
+}
+ul li a{
+    text-decoration: none;
+}
+/*------------------------------------------------------- FIN HEADER --------------------------------------------------*/
+.section1{
+    height: 250px;
+    background-color: blue;
+}
+.section2{
+    height: 250px;
+    background-color: rgb(0, 255, 102);
+    display : flex;
+    justify-content: space-between;
+}
+.section3{
+    height: 250px;
+    background-color: rgb(153, 91, 124);
+}
+.section4{
+    height: 250px;
+    background-color: #3990b2;
+}
+
+.boxSection1{
+    border: 1px solid black;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+.boxSection2{
+    border: 1px solid black;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+.boxSection3{
+    border: 1px solid black;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+.boxSection4{
+    border: 1px solid black;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
