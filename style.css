@@ -1,3 +1,6 @@
+:root{
+    --primarycolor:rgba(211, 60, 30, 0.596);
+}
 *{ 
     margin: 0; /*marge externe */
     padding: 0; /*marge interne */
@@ -17,6 +20,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    
 }
 /*-------------------------------------------------------- HEADER -----------------------------------------------------*/
 
@@ -27,6 +31,8 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: var(--primarycolor);
+
 }
 .linkMenu{
     display: flex;
@@ -38,8 +44,10 @@ ul li{
 }
 
 ul li a{
-    font-size: 20px;
+    font-size: 1.2em;
+    display: inline-block;
     color: #f6f6f6;
+    transition: color 0.3s;
 
 }
 #headerLogo{
@@ -65,6 +73,7 @@ main {
     display : flex;
     justify-content: space-around;
     margin-top: 5em;
+    background-color: rgba(211, 211, 30, 0.596);
 }
 .imagetry{
     width: 250px;
@@ -141,9 +150,6 @@ main {
 .boxSection3{
     text-align: center;
 }
-.boxSection4{
-
-}
 
 th,td{
     border: 1px solid black;
@@ -154,3 +160,77 @@ table{
     border-collapse: collapse;
     margin: 0 auto;
 }
+
+a:hover{
+    text-decoration: underline;
+    color: red;
+    transform: scale(2);
+}
+/* ------------------------------------------------------ ANIMATED BOX --------------------------------------------- */
+        /* Définition de l’animation */
+    @keyframes changeColor {
+      0%   { background-color: red; }
+      50%  { background-color: yellow; }
+      100% { background-color: green; }
+    }
+
+        /* Application de l’animation au div */
+    .animated-box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation: changeColor 3s infinite alternate;
+    }
+/*------------------------------------------------------ FIN ANIMATED BOX ---------------------------------------------*/
+
+
+/* ----------------------------------------------------- POP UP ------------------------------------*/
+/* fond semi transpaent qui couvre tout l'écran */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popUpText {
+    color: black;
+}
+/* affichage de la popup */
+.popup-overlay.active {
+    display:flex
+}
+
+/* contenu de la popu avec animation */
+.popup-content {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    position: relative;
+    min-width: 300px;
+    box-shadow: 0 4px 16px rgba (0,0,0,0.2);
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.4s, transform 0.4s;
+}
+/* Animation d'apparition */
+.popup-overlay.active .popup-content {
+    opacity: 1;
+    transform:scale(1)
+}
+/* Bouton de fermeture */
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+}
+.close-btn:hover{
+    color: #e74c3c;
+}
+/* ----------------------------------------------------- FIN POP UP ------------------------------------*/

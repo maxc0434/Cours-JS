@@ -28,6 +28,13 @@
     </header>
 
     <main> 
+      <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+          <span class="close-btn" id="closeBtn">&times;</span> <!-- span balise inline -->
+          <h2 class="popUpText"> YO </h2>
+          <p class="popUpText"> Le roi des pirates ce sera moi!</p>
+        </div>
+      </div>
 
       <section class="section1">
         <div class="boxSection1">
@@ -149,14 +156,34 @@
             <label for="cuisinier">Cuisinier</label><br>
           </p>
         </form>
-        <form action="">
-          
+        <form action="" method="get">
+          <label for="pays"> Choisissez un pays: </label>
+          <select name="pays" id="pays">
+            <option value="japon"> Japon </option>
+            <option value="france"> France </option>
+            <option value="italie"> Italie </option>
+          </select>
+          <fieldset>
+            <legend>Vos Coordonnées</legend>
+            <label for="nom">Quel est votre nom</label>
+            <input type="text" name="nom" id="nom"><br>
+            <label for="prenom">Quel est votre prenom</label>
+            <input type="text" name="prenom" id="prenom"><br>
+            <label for="mail">Quel est votre mail</label>
+            <input type="text" name="mail" id="mail"><br>
+          </fieldset>
+          <p>Quel magnifique formulaire!</p>
+          <input type="submit" value="envoyer mon Form">
         </form>
       </section>
-
-
+      
 
        <!-- ------------------------------FIN FORMULAIRE----------------------------- -->
+
+      <section> 
+        <div class="animated-box"></div>
+
+      </section>
 
     <!-- <section>
         <script>
