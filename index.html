@@ -6,8 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-
+  <body class="parallax">
+  
     <header class="headerMenu"> 
       <div class="headerBox">
         <div>
@@ -16,10 +16,10 @@
         <div>
           <nav>
             <ul class="linkMenu">
-              <li><a href="">accueil</a> </li>
-              <li><a href="">service</a> </li>
+              <li><a href="#">accueil</a> </li>
+              <li><a href="link/service.html">service</a> </li>
               <li><a href="">produit</a> </li>
-              <li><a href="">contact</a> </li>
+              <li><a href="link/contact.html">contact</a> </li>
             </ul>
           </nav>
         </div>
@@ -31,7 +31,7 @@
 
       <section class="section1">
         <div class="boxSection1">
-          <h1>Mangas</h1>
+          <h1 id="ancre">Mangas</h1>
           <h2>One Piece</h2>
         </div>
         <div class="boxSection1">
@@ -49,12 +49,9 @@
           <img class="imagetry" src="image/one piece try 2.jpeg" alt="imageTryTwo">
           <p>commentPictureTwo</p>
         </div>
-
       </section>
       
-      <section class="section2">
-          <h1>Ma Selection</h1>
-      </section>
+        <h1 class="BTT">Ma Selection</h1>
 
       <section class="section3">
         <div class="boxSection3">
@@ -92,10 +89,74 @@
       </section>
 
       <section class="section4">
-        <div class="boxSection4"></div>
-
+        <div class="boxSection4">
+          <h2 class="BTT">section BackToTop</h2>
+        </div>
+        <div class="buttonPosition">
+          <a class="BTT" href="#ancre">BackToTop</a>
+        </div>
       </section>
     </main>
+
+      <section class="section5">
+        <table>
+          <caption> Personnages One Piece </caption>
+           <tr> <!-- tr permet de creer une ligne de tableau -->
+            <th>Nom</th> <!-- th permet de creer des cellules d'en-tete -->
+            <th>Age</th>
+            <th>Role</th>
+          </tr>
+          <tr>
+            <td>Luffy</td> <!-- td permet de creer les cellules classiques -->
+            <td>23</td>
+            <td>capitaine</td>
+          </tr>
+          <tr>
+            <td>Zoro</td>
+            <td>25</td>
+            <td>bretteur</td>
+          </tr>
+          <tr>
+            <td>Sanji</td>
+            <td>24</td>
+            <td>cuisinier</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- ------------------------------FORMULAIRE----------------------------- -->
+      <section>
+        <h2 class="BTT"> FORMULAIRE </h2>
+        <form action="">
+          <label for="prenom"> Votre Prénom </label>
+          <input type="text" name="prenom" id="prenom" placeholder="votre prenom ici" size="30" maxlength="20">
+          <p> 
+            cochez votre personnage préféré: <br>
+            <input type="checkbox" name="luffy" id="luffy">
+            <label for="luffy">Luffy</label><br>
+            <input type="checkbox" name="zoro" id="zoro">
+            <label for="zoro">Zoro</label><br>
+            <input type="checkbox" name="sanji" id="sanji">
+            <label for="sanji">Sanji</label>
+          </p>
+          <p>
+            Veuillez indiquer votre role préféré: <br>
+            <input type="radio" name="role" id="capitaine" value="capitaine">
+            <label for="capitaine">Capitaine</label><br>
+            <input type="radio" name="role" id="bretteur" value="bretteur">
+            <label for="bretteur">Bretteur</label><br>
+            <input type="radio" name="role" id="cuisinier" value="cuisinier">
+            <label for="cuisinier">Cuisinier</label><br>
+          </p>
+        </form>
+        <form action="">
+          
+        </form>
+      </section>
+
+
+
+       <!-- ------------------------------FIN FORMULAIRE----------------------------- -->
 
     <!-- <section>
         <script>

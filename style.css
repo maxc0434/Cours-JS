@@ -8,7 +8,15 @@
 a {
     text-decoration: none;
     color: black;
+}
 
+.parallax { /* parallax = nom de l'effet des 6 effets ci apres pour l'image de fond */
+    /*background-image: url(image/fondDuSite.jpeg); /*defini l'image de fond*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 /*-------------------------------------------------------- HEADER -----------------------------------------------------*/
 
@@ -16,6 +24,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .linkMenu{
     display: flex;
@@ -28,18 +39,26 @@ ul li{
 
 ul li a{
     font-size: 20px;
+    color: #f6f6f6;
 
 }
 #headerLogo{
     width: 178px;
 }
 /*------------------------------------------------------- FIN HEADER --------------------------------------------------*/
+
+main {
+    padding-top: 100px;
+}
+
 .section1{
     display: flex;
     justify-content: space-around;
+    background-color: rgba(211, 211, 30, 0.596);
 }
 .coverUn{
     width: 100px;
+    
 }
 
 .section2{
@@ -101,9 +120,18 @@ ul li a{
     margin-top: 2em;
 }
 
-.section4{
-    height: 250px;
-    background-color: #3990b2;
+.BTT{
+    color: white;
+    text-align: center;
+}
+
+.buttonPosition{
+    display: flex;
+    justify-content: flex-end;
+}
+.boxSection1{
+    text-align: center;
+    align-items:center;
 }
 
 .boxSection2{
@@ -114,9 +142,15 @@ ul li a{
     text-align: center;
 }
 .boxSection4{
+
+}
+
+th,td{
     border: 1px solid black;
-    margin: 5px;
-    height: 100px;
-    width: 100px;
-    background-color: yellow;
+    padding: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
 }
