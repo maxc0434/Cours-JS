@@ -472,29 +472,34 @@ let jours = ['lun', '007', 'mer', 'jeu', 'ven', 'sam', 'BUG' ];
 
     var mauvaisesLettres = [ ];
     var lettresAttendues = [ 's', 'u', 'p', 'e', 'r' ];
-    var lettresProposees = prompt ("choisissez une lettre".toLowerCase());
     var lettresTrouvees = [ ];
-    var indexLettre = lettresAttendues.indexOf (lettresProposees);
     console.log (indexLettre);
 
-    for (i=0; i<10; i++){
 
+    for (i=0; i<10; i++){
+      var lettresProposees = prompt ("choisissez une lettre".toLowerCase());
+      var indexLettre = lettresAttendues.indexOf (lettresProposees);
+      
       if (indexLettre === -1){
         mauvaisesLettres.push (lettresProposees);
         alert ("MAUVAISE Réponse");
-        console.log (mauvaisesLettres)
+        console.log (mauvaisesLettres);
       }
       else if (indexLettre === 0 || 1 || 2 || 3 || 4){
         alert ("BONNE Réponse");
         lettresTrouvees.push (lettresProposees);
-        console.log (lettresTrouvees)
+        console.log (lettresTrouvees);
       }
-      else {
-        alert ("Je ne comprends pas");
+      if (lettresTrouvees.length === 5){
+      alert ("Partie Gagnée");
+      console.log (userScore);
       }
+    } 
+      alert ("Partie Perdue");
 
 
-    }
+
+
 
 
 
