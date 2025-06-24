@@ -274,7 +274,8 @@
       }
 
                                             FIZZBUZZ
-      <script>
+    <section>
+       <script> 
         for(let i=1; i<200; i++) {
           if (i%3 === 0 && i%5 === 0) {
             console.log("fizzbuzz")
@@ -287,8 +288,8 @@
 
           }
         }
-      </script>
-    </section> -->
+      </script> -->
+    </section>
 
 
   <!-- <section>
@@ -416,6 +417,9 @@ let jours = ['lun', '007', 'mer', 'jeu', 'ven', 'sam', 'BUG' ];
 
 
 </script> -->
+      <!-- -------------------------------------------------FIN CALENDRIER----------------------------------------------- -->
+
+
 <!-- -------------------------------------------------------EPICERIE V1--------------------------------------------------- -->
 <script>
 
@@ -468,43 +472,8 @@ let jours = ['lun', '007', 'mer', 'jeu', 'ven', 'sam', 'BUG' ];
 //   }
   // <!-- -------------------------------------------------------FIN EPICERIE V2--------------------------------------------------- -->
 
-// <!-- -------------------------------------------------------PENDU--------------------------------------------------- -->
-
-    var mauvaisesLettres = [ ];
-    var lettresAttendues = [ 's', 'u', 'p', 'e', 'r' ];
-    var lettresTrouvees = [ ];
-    console.log (indexLettre);
 
 
-    for (i=0; i<10; i++){
-      var lettresProposees = prompt ("choisissez une lettre".toLowerCase());
-      var indexLettre = lettresAttendues.indexOf (lettresProposees);
-      
-      if (indexLettre === -1){
-        mauvaisesLettres.push (lettresProposees);
-        alert ("MAUVAISE Réponse");
-        console.log (mauvaisesLettres);
-      }
-      else if (indexLettre === 0 || 1 || 2 || 3 || 4){
-        alert ("BONNE Réponse");
-        lettresTrouvees.push (lettresProposees);
-        console.log (lettresTrouvees);
-      }
-      if (lettresTrouvees.length === 5){
-      alert ("Partie Gagnée");
-      console.log (userScore);
-      }
-    } 
-      alert ("Partie Perdue");
-
-
-
-
-
-
-
-
-// <!-- -------------------------------------------------------FIN PENDU--------------------------------------------------- -->
 </script>
 
   </section>
