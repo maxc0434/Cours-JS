@@ -43,23 +43,23 @@
 // console.log (n)
 
 
-// for (i=0; i<10; i++){
-//   let essai = Number (prompt ("choisi un chiffre"));
+    // for (i=0; i<10; i++){
+    //   let essai = Number (prompt ("choisi un chiffre"));
 
-//   if (essai===n) {
-//     alert ("Bravo")
-//     return;
-//   }
+    //   if (essai===n) {
+    //     alert ("Bravo")
+    //     return;
+    //   }
 
-//   else if (essai<n){
-//     alert ("plus grand! Essaie encore") 
-//   } 
-//   else {
-//     alert ("plus petit! Essaie encore")
-//   }
+    //   else if (essai<n){
+    //     alert ("plus grand! Essaie encore") 
+    //   } 
+    //   else {
+    //     alert ("plus petit! Essaie encore")
+    //   }
 
-// }
-// alert ("Perdu, vous avez utilisé tous vos essais. Le nombre secret était " + n + ".")
+    // }
+    // alert ("Perdu, vous avez utilisé tous vos essais. Le nombre secret était " + n + ".")
 // }
 // nombreMystere();
 //#endregion nombreMystere
@@ -273,8 +273,10 @@
         //#endregion ChatBot
         // ------------------------------------------- FIN CHATBOT -----------------------------------------
 
+        
 
 // ---------------------------------------------------- ANNUAIRE -------------------------------------------
+//#region annuaire
 
 //------------- Partie 1 Annuaire
 // var annuaire = {
@@ -290,7 +292,7 @@
 
 // ------------ Partie 2 Repertoire Telephonique
 function annuaire() {
-  var lesCoordonnees = {
+  let lesCoordonnees = {
     patricia: '06 66 66 66 66',
     david: '07 77 77 77 77',
     maxime: '08 88 88 88 88',
@@ -299,31 +301,55 @@ function annuaire() {
   
 
   while (userChoice!=="q") {
-    userChoice = prompt("Que voulez vous faire:r -> pour rechercher, l -> pour liste, a -> pour ajouter,s -> pour supprimer, q -> pour quitter");
+    userChoice = prompt("Que voulez vous faire:\nr -> pour rechercher,\n l -> pour liste,\n a -> pour ajouter,\ns -> pour supprimer,\n q -> pour quitter");
 
     switch (userChoice){
       case "r":
-        var request = prompt("qui voulez vous appeler?");
+        let request = prompt("qui voulez vous appeler?");
         if (lesCoordonnees[request]){
           alert("le numero demandé est: " + lesCoordonnees[request]);
         }
         else {
           alert("le correspondant n'existe pas");
         }
-
-
+        break;
       case "l":
-        for(coordonnee in lesCoordonnees){
-        console.log(coordonnee, ' => ', lesCoordonnees);
+        let liste = "liste des contacts: \n";
+        for ( let request in lesCoordonnees) {
+          liste += request + " : " + lesCoordonnees[request] + "\n";
         }
-
+        alert(liste);
+        break;
       case "a":
         let nouvelleEntreeNom = prompt("ajouter un nom");
         let nouvelleEntreeTelephone = prompt("ajouter un numéro");
-        lesCoordonnees
+        lesCoordonnees[nouvelleEntreeNom] = nouvelleEntreeTelephone;
+        alert("Vous avez bien ajouté " + nouvelleEntreeNom + " et son numero => " + nouvelleEntreeTelephone);
+        console.log(lesCoordonnees);
+        break;
+      case "s":
+        let entreesAsupprimer = prompt("quel nom voulez vous supprimer");
+        if (lesCoordonnees[entreesAsupprimer]){
+          delete(lesCoordonnees[entreesAsupprimer]);
+          alert("vous avez bien supprimé l'entrée");
+          console.log(lesCoordonnees);
+        }
+        else{
+          alert("le nom est inconnu");
+        }
+        break;
+      case "q": 
+        alert("Au revoir");
+        break;
+      default: 
+        alert("cette fonctionnalité n'existe pas");
+
     }
   }
 }
 annuaire();
+
+//#endregion annuaire
+
 // ----------------------------------------------------FIN ANNUAIRE -----------------------------------------
 
