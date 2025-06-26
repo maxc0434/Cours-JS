@@ -291,65 +291,89 @@
 // alert(response)
 
 // ------------ Partie 2 Repertoire Telephonique
-function annuaire() {
-  let lesCoordonnees = {
-    patricia: '06 66 66 66 66',
-    david: '07 77 77 77 77',
-    maxime: '08 88 88 88 88',
-    }; 
-  let userChoice = '';
+// 
+
+// function annuaire() {
+//   let lesCoordonnees = {
+//     patricia: '06 66 66 66 66',
+//     david: '07 77 77 77 77',
+//     maxime: '08 88 88 88 88',
+//     }; 
+//   let userChoice = '';
   
 
-  while (userChoice!=="q") {
-    userChoice = prompt("Que voulez vous faire:\nr -> pour rechercher,\n l -> pour liste,\n a -> pour ajouter,\ns -> pour supprimer,\n q -> pour quitter");
+//   while (userChoice!=="q") {
+//     userChoice = prompt("Que voulez vous faire:\nr -> pour rechercher,\n l -> pour liste,\n a -> pour ajouter,\ns -> pour supprimer,\n q -> pour quitter");
 
-    switch (userChoice){
-      case "r":
-        let request = prompt("qui voulez vous appeler?");
-        if (lesCoordonnees[request]){
-          alert("le numero demandé est: " + lesCoordonnees[request]);
-        }
-        else {
-          alert("le correspondant n'existe pas");
-        }
-        break;
-      case "l":
-        let liste = "liste des contacts: \n";
-        for ( let request in lesCoordonnees) {
-          liste += request + " : " + lesCoordonnees[request] + "\n";
-        }
-        alert(liste);
-        break;
-      case "a":
-        let nouvelleEntreeNom = prompt("ajouter un nom");
-        let nouvelleEntreeTelephone = prompt("ajouter un numéro");
-        lesCoordonnees[nouvelleEntreeNom] = nouvelleEntreeTelephone;
-        alert("Vous avez bien ajouté " + nouvelleEntreeNom + " et son numero => " + nouvelleEntreeTelephone);
-        console.log(lesCoordonnees);
-        break;
-      case "s":
-        let entreesAsupprimer = prompt("quel nom voulez vous supprimer");
-        if (lesCoordonnees[entreesAsupprimer]){
-          delete(lesCoordonnees[entreesAsupprimer]);
-          alert("vous avez bien supprimé l'entrée");
-          console.log(lesCoordonnees);
-        }
-        else{
-          alert("le nom est inconnu");
-        }
-        break;
-      case "q": 
-        alert("Au revoir");
-        break;
-      default: 
-        alert("cette fonctionnalité n'existe pas");
+//     switch (userChoice){
+//       case "r":
+//         let request = prompt("qui voulez vous appeler?");
+//         if (lesCoordonnees[request]){
+//           alert("le numero demandé est: " + lesCoordonnees[request]);
+//         }
+//         else {
+//           alert("le correspondant n'existe pas");
+//         }
+//         break;
+//       case "l":
+//         let liste = "liste des contacts: \n";
+//         for ( let request in lesCoordonnees) {
+//           liste += request + " : " + lesCoordonnees[request] + "\n";
+//         }
+//         alert(liste);
+//         break;
+//       case "a":
+//         let nouvelleEntreeNom = prompt("ajouter un nom");
+//         let nouvelleEntreeTelephone = prompt("ajouter un numéro");
+//         lesCoordonnees[nouvelleEntreeNom] = nouvelleEntreeTelephone;
+//         alert("Vous avez bien ajouté " + nouvelleEntreeNom + " et son numero => " + nouvelleEntreeTelephone);
+//         console.log(lesCoordonnees);
+//         break;
+//       case "s":
+//         let entreesAsupprimer = prompt("quel nom voulez vous supprimer");
+//         if (lesCoordonnees[entreesAsupprimer]){
+//           delete(lesCoordonnees[entreesAsupprimer]);
+//           alert("vous avez bien supprimé l'entrée");
+//           console.log(lesCoordonnees);
+//         }
+//         else{
+//           alert("le nom est inconnu");
+//         }
+//         break;
+//       case "q": 
+//         alert("Au revoir");
+//         break;
+//       default: 
+//         alert("cette fonctionnalité n'existe pas");
 
-    }
-  }
-}
-annuaire();
+//     }
+//   }
+// }
+// annuaire();
 
 //#endregion annuaire
 
 // ----------------------------------------------------FIN ANNUAIRE -----------------------------------------
 
+// -------------------------------------------------INTRODUCTION A LA Programmation Orienté Objet ------------------------------
+//#region Intro POO
+
+class Etudiant{
+    constructor(age, poids, sexe){
+        this.age=age;
+        this.poids=poids;
+        this.sexe=sexe;
+        // alert ("etudiant instancié")
+    }
+}
+
+
+let etudiant1 = new Etudiant(36, 89, "Masculin" );
+// alert(etudiant1.age);
+let etudiant2 = new Etudiant(85, 150);
+// alert(etudiant2.poids);
+
+alert("etudiant1 a " + etudiant1.age + "ans et pèse " + etudiant1.poids + "kg et est de sexe " + etudiant1.sexe )
+
+//#endregion Intro POO
+// ---------------------------------------------FIN INTRODUCTION A LA Programmation Orienté Objet --------------

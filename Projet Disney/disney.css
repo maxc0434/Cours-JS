@@ -1,0 +1,378 @@
+.disneyHeaderBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.disneyHeaderLogo{
+    width: 130px;
+}
+
+.a{
+    text-decoration: none;
+    font-style: normal;
+}
+
+ul li{
+    list-style-type: none;
+    padding: 15px; 
+}
+
+ul li a{
+    font-size: 1.2em;
+    display: flex;
+    color: black;
+    transition: color 0.3s;
+    font-family: Arial;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.disneyLinkMenu{
+    display: flex;
+}
+
+
+.siteCover{
+    background-image: url(imagesDisney/elioPoster.jpeg);
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    width: 83%;
+    margin: 0 auto;
+    height: 70vh;
+}
+.blockElioLogoButton{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 10em;
+    left: 10em;
+
+}
+.elioLogo{
+    width: 40%;
+}
+.buttonTicket{
+    width: 14em;
+    height: 3em;
+    border-radius: 45px 45px 45px 45px;
+}
+
+
+.articleCover{
+    display:flex;
+    width: 83%;
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color:rgb(236, 236, 236)
+}
+.modifImageA{
+    width: 30vh;
+}
+.articleA{
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    background-color: whitesmoke;
+}
+.modifH1ArtA{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size:large
+}
+.modifParArtA{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: small;
+}
+.modifH5ArtA{
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.articleB{
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    background-color: whitesmoke;
+}
+.modifH1ArtB{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size:large
+}
+.modifParArtB{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: small;
+}
+.modifH5ArtB{
+    align-items: flex-end;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.modifImageB{
+    width: 30vh;
+}
+
+.articleC{
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    background-color: whitesmoke;
+}
+.modifH1ArtC{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size:large
+}
+.modifParArtC{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: small;
+}
+.modifImageC{
+    width: 30vh;
+}
+.modifH5ArtC{
+    align-items: flex-end;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.articleD{
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    background-color: whitesmoke;
+}
+.modifH1ArtD{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size:large
+}
+.modifParArtD{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: small;
+}
+.modifH5ArtD{
+    align-items: flex-end;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.modifImageD{
+    width: 30vh;
+}
+
+
+.articleCoverSecond{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #054553;
+    width: 83%;
+    margin: 0 auto;
+    height: 40vh;
+}
+.titreCoverSecond{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #054553;
+    width: 83%;
+    margin: 0 auto;
+    height: 15vh;
+}
+.titleArticleSecond{
+    color: whitesmoke;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    font-size: xx-large;
+}
+
+.articleE{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+}
+.modifImageE{
+    display: flex;
+    width: 50vh;
+}
+.modifH1ArtE{
+    font-size: small;
+    display: flex;
+    justify-content: flex-start;
+    color: whitesmoke;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.articleF{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+}
+.modifImageF{
+    display: flex;
+    width: 50vh;
+}
+.modifH1ArtF{
+    font-size:small;
+    display: flex;
+    justify-content: flex-start;
+    color: whitesmoke;
+font-family: Tahoma, Geneva, sans-serif;
+}
+.articleG{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+}
+.modifImageG{
+    display: flex;
+    width: 50vh;
+}
+.modifH1ArtG{
+    font-size:small;
+    display: flex;
+    justify-content: flex-start;
+    color: whitesmoke;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.sectionButtonInscript{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #054553;
+    width: 83%;
+    margin: 0 auto;
+    height: 20vh;
+}
+.divButton2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.buttonInscript{
+    width: 40vh;
+    height: 8vh;
+    border-radius: 45px 45px 45px 45px;
+    font-weight: 700;
+}
+.modifH6Button{
+    color: whitesmoke;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+
+.titleCoverThird{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 83%;
+    margin: 0 auto;
+    height: 15vh;
+    background-color:rgb(236, 236, 236)
+}
+.titleArticleThird{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    font-size: xx-large;
+}
+.articleCoverThird{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 83%;
+    margin: 0 auto;
+    height: 80vh;
+    background-color:rgb(236, 236, 236)
+}
+.articleH{
+    display: flex;
+    flex-direction: column;
+    width: 70vh;
+    background-color: whitesmoke;
+    height: inherit;
+}
+.modifImageH{
+    display: flex;
+    width: 70vh;
+}
+.modifH2ArtH{
+    font-size:medium;
+    display: flex;
+    justify-content: flex-start;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.modifParArtH{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: small;
+}
+.modifH5ArtH{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: small;
+}
+
+.articleI{
+    display: flex;
+    flex-direction: column;
+    width: 70vh;
+    background-color: whitesmoke;
+    height: inherit;
+}
+.modifH2ArtI{
+    font-size:medium;
+    display: flex;
+    justify-content: flex-start;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.modifParArtI{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: small;
+}
+.modifH5ArtI{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: small;
+}
+.modifImageI{
+    display: flex;
+    width: 70vh;
+}
+
+
+.titleCoverFourth{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 83%;
+    margin: 0 auto;
+    height: 15vh;
+    background-color:rgb(236, 236, 236)
+}
+.titleArticleFourth{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    font-size: xx-large;
+}
+.articleJ{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    background-color: whitesmoke;
+    height: inherit;
+}
+.modifImageJ{
+    display: flex;
+    width: 50vh;
+}
+.articleK{
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+    background-color: whitesmoke;
+    height: inherit;
+}
+.modifImageK{
+    display: flex;
+    width: 40vh;
+}
+.articleL{
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+    background-color: whitesmoke;
+    height: inherit;
+}
+.modifImageL{
+    display: flex;
+    width: 40vh;
+}
