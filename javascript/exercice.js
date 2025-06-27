@@ -355,25 +355,36 @@
 
 // ----------------------------------------------------FIN ANNUAIRE -----------------------------------------
 
+
+
+
+
+
+
+
+
+
+
+
 // -------------------------------------------------INTRODUCTION A LA Programmation Orienté Objet ------------------------------
 //#region Intro POO
 
-class Etudiant{
-    constructor(age, poids, sexe){
-        this.age=age;
-        this.poids=poids;
-        this.sexe=sexe;
-        // alert ("etudiant instancié")
-    }
-}
+// class Etudiant{
+//     constructor(age, poids, sexe){
+//         this.age=age;
+//         this.poids=poids;
+//         this.sexe=sexe;
+//         // alert ("etudiant instancié")
+//     }
+// }
 
 
-let etudiant1 = new Etudiant(36, 89, "Masculin" );
-// alert(etudiant1.age);
-let etudiant2 = new Etudiant(85, 150);
-// alert(etudiant2.poids);
+// let etudiant1 = new Etudiant(36, 89, "Masculin" );
+// // alert(etudiant1.age);
+// let etudiant2 = new Etudiant(85, 150);
+// // alert(etudiant2.poids);
 
-alert("etudiant1 a " + etudiant1.age + "ans et pèse " + etudiant1.poids + "kg et est de sexe " + etudiant1.sexe )
+// alert("etudiant1 a " + etudiant1.age + "ans et pèse " + etudiant1.poids + "kg et est de sexe " + etudiant1.sexe )
 
 //#endregion Intro POO
 // ---------------------------------------------FIN INTRODUCTION A LA Programmation Orienté Objet --------------
