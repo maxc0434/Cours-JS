@@ -1,18 +1,30 @@
+// ------------------------------- Menu BURGER -------------------------------------//
+
+
+// let menuBurger = document.querySelector(".menuBurger"), 
+// basculant = document.querySelector(".basculant")
+
+// basculant.addEventListener("click", function(event) {
+//   menuBurger.classList.toggle("active")
+// });
+
+
 // --------------------------  AFFICHE LA POPUP AUTOMATIQUEMENT AU CHARGEMENT DE LA PAGE  ------------------------------------------ //
-//#region Popup
-// // Lorsque la fenêtre est complètement chargée,
-// // ajoute la classe 'active' à l'élément ayant l'ID 'popup' pour l'afficher.
+// #region Popup
+// Lorsque la fenêtre est complètement chargée,
+// ajoute la classe 'active' à l'élément ayant l'ID 'popup' pour l'afficher.
 // window.onload = function() {
 //   document.getElementById('popup').classList.add('active');
-// };
+// }
 
-// // Lorsque l'utilisateur clique sur la croix de fermeture (élément avec l'ID 'closeBtn'),
-// // retire la classe 'active' de l'élément 'popup' pour masquer la pop-up.
+// Lorsque l'utilisateur clique sur la croix de fermeture (élément avec l'ID 'closeBtn'),
+// retire la classe 'active' de l'élément 'popup' pour masquer la pop-up.
 // document.getElementById('closeBtn').onclick = function() {
 //   document.getElementById('popup').classList.remove('active');
-// };
-//#endregion Popup
+// }
+// #endregion Popup
 // --------------------------  FIN POPUP  ------------------------------------------ //
+
 
 
 
@@ -33,6 +45,12 @@
         // }
 //#endregion Fizzbuzz
 // ----------------------------------------------- FIN FIZZBUZZ -----------------------------------------------
+
+
+
+
+
+
 
 
 
@@ -223,11 +241,16 @@
 // -------------------------------------------------------  FIN FONCTION DIVISER PAR 2-------------------------------------------------
 
 
+
+
+
+
+
 // ---------------------------------------------------- CHATBOT ---------------------------------------------
 //#region ChatBot
 
         // let uneQuestion = prompt(
-        //   "Dis moi ou bonjour (vous ne pouvez dire que bonjour)"
+        //   "Dis moi bonjour (vous ne pouvez dire que bonjour)"
         // );
         // if (uneQuestion !== "bonjour") {
         //   alert("Au revoir dans ce cas!");
@@ -274,6 +297,9 @@
         // ------------------------------------------- FIN CHATBOT -----------------------------------------
 
         
+
+
+
 
 // ---------------------------------------------------- ANNUAIRE -------------------------------------------
 //#region annuaire
@@ -352,14 +378,7 @@
 // annuaire();
 
 //#endregion annuaire
-
 // ----------------------------------------------------FIN ANNUAIRE -----------------------------------------
-
-
-
-
-
-
 
 
 
@@ -388,3 +407,55 @@
 
 //#endregion Intro POO
 // ---------------------------------------------FIN INTRODUCTION A LA Programmation Orienté Objet --------------
+
+
+let actionsMangas = document.getElementsByClassName("action");
+let aventuresMangas = document.getElementsByClassName("aventure");
+let comedieMangas = document.getElementsByClassName("comedie");
+let allMangas = document.getElementsByClassName("action" + "aventure" + "comedie");
+
+document.getElementById('actionBtn').onclick = function hide(){
+    for (let i = 0; i < aventuresMangas.length; i++) {
+        aventuresMangas[i].classList.add("hidden");
+    }
+    for (let i = 0; i < comedieMangas.length; i++) {
+        comedieMangas[i].classList.add("hidden");
+    }
+    for (let i = 0; i < actionsMangas.length; i++) {
+        actionsMangas[i].classList.remove("hidden");
+    }
+  }
+
+  document.getElementById('aventureBtn').onclick = function hide(){
+    for (let i = 0; i < actionsMangas.length; i++) {
+        actionsMangas[i].classList.add("hidden");
+    }
+    for (let i = 0; i < comedieMangas.length; i++) {
+        comedieMangas[i].classList.add("hidden");
+    }
+    for (let i = 0; i < aventuresMangas.length; i++) {
+        aventuresMangas[i].classList.remove("hidden");
+    }
+  }
+  document.getElementById('comedieBtn').onclick = function hide(){
+    for (let i = 0; i < actionsMangas.length; i++) {
+        actionsMangas[i].classList.add("hidden");
+    }
+    for (let i = 0; i < aventuresMangas.length; i++) {
+        aventuresMangas[i].classList.add("hidden");
+    }
+    for (let i = 0; i < comedieMangas.length; i++) {
+        comedieMangas[i].classList.remove("hidden");
+    }
+  }
+  document.getElementById('allBtn').onclick = function reveal(){
+    for (let i = 0; i < comedieMangas.length; i++) {
+        comedieMangas[i].classList.remove("hidden");
+    }
+    for (let i = 0; i < aventuresMangas.length; i++) {
+        aventuresMangas[i].classList.remove("hidden");
+    }
+    for (let i = 0; i < actionsMangas.length; i++) {
+        actionsMangas[i].classList.remove("hidden");
+    }
+  }

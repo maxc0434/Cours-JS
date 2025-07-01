@@ -1,8 +1,10 @@
-.titreCalculatrice{
 
-}
 
 .maquetteCalculatrice{
     display: flex;
 
+}
+
+.hidden {
+    display: none;
 }

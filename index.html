@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="parallax">
-  
+    
     <header class="headerMenu"> 
       <div class="headerBox">
         <div>
-          <img id="headerLogo" src="image/anime-one_piece-monkey_d_luffy-383383.jpeg" alt="logo">
+          <img class="headerLogo" src="image/anime-one_piece-monkey_d_luffy-383383.jpeg" alt="logo">
         </div>
         <div>
           <nav>
@@ -24,19 +24,80 @@
           </nav>
         </div>
       </div>
+
+      <div class="menuBurger">
+        <div>
+          <img class="headerLogo" src="/image/anime-one_piece-monkey_d_luffy-383383.jpeg" alt="Logo">
+        </div>
+          <nav>
+            <div class="navigation">
+              <ul class="navLien">
+              <li><a href="#">accueil</a> </li>
+              <li><a href="link/service.html">service</a> </li>
+              <li><a href="">produit</a> </li>
+              <li><a href="link/contact.html">contact</a> </li>
+              </ul>
+              <div class="basculant"> </div>
+            </div>
+          </nav>
+      </div>
       
     </header>
+  
+    <main>
+<!-- PopUp -->
 
-    <main> 
-      <! <div id="popup" class="popup-overlay">
+      <div id="popup" class="popup-overlay">
         <div class="popup-content">
           <span class="close-btn" id="closeBtn">&times;</span> 
-          <h2 class="popUpText"> YO </h2>
+          <h2 class="popUpText"> YO ! </h2>
           <p class="popUpText"> Le roi des pirates ce sera moi!</p>
         </div>
-      </div> -->
+      </div>
 
-      <!-- <section class="section1">
+
+       <div class="section">
+          <img class="imagSectionTest" src="/image/OP wallpaper.jpg" alt="Description de l’image">
+            <p class="petit-texte">Voici Monkey D. Luffy...</p>
+                
+<!-- Checkbox caché -->
+            <input type="checkbox" id="toggle-desc" class="toggle-desc">
+            <label for="toggle-desc" class="arrow-container">
+                <span class="arrow-down">↓ voir plus</span>
+            </label>
+                
+            <div class="description-box">
+                <p class="textBoxBlack">Monkey D. Luffy surnommé de manière récurrente Luffy au chapeau de paille ( Mugiwara no Rufi?), est un personnage de fiction et principal protagoniste de la franchise japonaise One Piece créée par Eiichirō Oda. Il est intronisé en tant que garçon ayant un corps élastique, une faculté qu'il a développée après avoir mangé un fruit du démon[1]. Il est le fondateur et le capitaine de l'équipage de Chapeau de paille. Son rêve de toujours est de devenir le roi des pirates en trouvant le trésor légendaire, le One Piece, laissé par le défunt roi des pirates, Gol D. Roger. Selon lui, le roi des pirates est l'homme le plus libre du monde. Après l'attaque sur Onigashima, il est considéré comme étant l'un des Quatre Empereurs.  </p>
+            </div>
+        </div>
+
+
+<!-- Nouvelle section avec animation type  fade-in -->
+        <section id="fadein-section" class="fade-in">
+            <h2 class="fadeinColor">Section animée en fade-in</h2>
+            <p class="fadeinColor">Ce contenu apparaît en fondu grâce à une animation CSS.</p>
+        </section>
+
+<!-- Nouvelle section zoom rotate in -->
+        <section class="zoom-rotate-in">
+            <h2 class="fadeinColor"> Effet zoom et rotation</h2>
+            <p class="fadeinColor">Ce contenu apparait avec un effet de zoom</p>
+        </section>
+
+<!-- animation CARTOON avec bouton (effet bounce)-->
+        <!-- <section>
+          <button class="bounce"> Cliquez-Moi</button>
+        </section> -->
+
+<!-- animation SHAKE avec bouton-->
+        <section>
+          <button class="shake"> Shake-Moi</button>
+        </section>
+
+
+
+
+      <section class="section1">
         <div class="boxSection1">
           <h1 id="ancre">Mangas</h1>
           <h2>One Piece</h2>
@@ -93,9 +154,9 @@
           <img class="huitWano" src="image/one piece projet/huitWano.JPG" alt="wano">
           <p>De loin le plus long de tous les Arcs.</p>
         </div>
-      </section>  -->
+      </section> 
 
-      <!-- <section class="section4">
+      <section class="section4">
         <div class="boxSection4">
           <h2 class="BTT">section BackToTop</h2>
         </div>
@@ -103,19 +164,19 @@
           <a class="BTT" href="#ancre">BackToTop</a>
         </div>
       </section>
-    </main>
+
 
       <section class="section5">
         <table>
           <caption> Personnages One Piece </caption>
-           <tr>  tr permet de creer une ligne de tableau -->
-            <!-- <th>Nom</th> th permet de creer des cellules d'en-tete -->
-            <!-- <th>Age</th>
+           <tr>  tr permet de creer une ligne de tableau
+            <th>Nom</th> th permet de creer des cellules d'en-tete 
+            <th>Age</th>
             <th>Role</th>
           </tr>
           <tr>
-            <td>Luffy</td> td permet de creer les cellules classiques -->
-            <!-- <td>23</td>
+            <td>Luffy</td> td permet de creer les cellules classiques 
+            <td>23</td>
             <td>capitaine</td>
           </tr>
           <tr>
@@ -129,7 +190,7 @@
             <td>cuisinier</td>
           </tr>
         </table>
-      </section> -->
+      </section>
 
       <!-- ------------------------------FORMULAIRE----------------------------- -->
       <!-- <section>
@@ -185,124 +246,51 @@
 
       </section> -->
 
-    <!-- <section>
-        <script>
-            let uneQuestion = prompt("Dis moi soit bonjour soit tu vas bien ?...");
-            if (uneQuestion === "bonjour"){
-                alert ("Bonjour à toi");
-            } else if (uneQuestion === "tu vas bien ?"){
-                alert ("ca va et toi");
-            } else {
-                alert ("désolé j'ai pas compris")
-            }
+      <!-- --------------------- Filtrage par catégorie -->
 
-        </script>
-    </section> -->
+<div class="choiceBtn">
+  <h2>Quelle catégorie de Mangas voudrais-tu lire?</h2>
+<button id="actionBtn"> Action </button>
+<button id="aventureBtn"> Aventure </button>
+<button id="comedieBtn"> Comédie </button>
+<button id="allBtn"> Toute la Collection </button>
+</div>
 
-
-
-    <!-- <section>
-        <script>
-            let uneQuestion = prompt ("Dis moi ou bonjour!");
-            if (uneQuestion === "bonjour"){
-                let questionDeux = prompt ("Bonjour, ca va?");
-                    if (questionDeux === "oui"){
-                        alert ("Je suis content pour toi")
-                    } 
-            else {
-                alert ("Désolé, il faut que je file")
-                 }
-            }              
-        </script>
-    </section> -->
-
-    <!-- <section>
-                                        CHATBOT
-      <script>
-        let uneQuestion = prompt(
-          "Dis moi ou bonjour (vous ne pouvez dire que bonjour)"
-        );
-        if (uneQuestion !== "bonjour") {
-          alert("Au revoir dans ce cas!");
-        }
-        if (uneQuestion === "bonjour") {
-          let questionDeux = prompt("Bonjour, ca va?");
-
-          if (questionDeux === "oui") {
-            let questionDeuxOui = prompt(
-              "Que vas tu faire aujourd'hui? Vas tu 1 travailler ou 2 te détendre"
-            );
-
-            if (questionDeuxOui === "1") {
-              alert("bon travail!");
-            }
-            if (questionDeuxOui === "2") {
-              alert("détend toi bien");
-            } else {
-              alert("Ciao!");
-            }
-          }
-          if (questionDeux === "non") {
-            let questionDeuxNon = prompt("Ah Bon? Pourquoi? Tu as mal dormi ?");
-
-            if (questionDeuxNon === "oui") {
-              let questionDodo = prompt("un cauchemar?");
-            }
-            if (questionDeuxNon === "non") {
-              alert("D'accord, passe une bonne journée quand même");
-            }
-
-            if (questionDodo === "oui") {
-              alert("vas te reposer aujourd'hui");
-            }
-            
-          } else {
-            alert("ok bye");
-          }
-        } else {
-          alert("Désolé, il faut que je file");
-        }
-      </script>
-    </section> -->
+<div class="mangaSelection">
+<ul id="listeMangas">
+  <li class="action">One Piece</li>
+    <p class="hidden action">L'histoire d'un jeune garçon qui veut devenir le roi des pirates!</p>
+  <li class="action">Bleach</li>
+    <p class="hidden action">Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits.</p>
+  <li class="action">DragonBall Z</li>
+    <p class="hidden action">L'histoire d'un homme qui veut être le meilleur à la bagarre!</p>
+  <li class="aventure">Naruto</li>
+    <p class="hidden aventure">L'histoire d'un jeune garçon qui veut devenir le meilleur ninja</p>
+  <li class="aventure">Hunter x Hunter</li>
+    <p class="hidden aventure">Abandonné par son père qui est un Hunter, à la fois un aventurier et un chasseur de primes, Gon décide à l'âge de 12 ans de partir pour devenir un Hunter.</p>
+  <li class="aventure">Fairy Tail</li>
+    <p class="hidden aventure">Lucy, une jeune fille, rêve de devenir magicienne.</p>
+  <li class="aventure">Dr Stone</li>
+    <p class="hidden aventure">l'humanité entière est transformée en pierre ! Des milliers d'années plus tard, à son réveil, il décide de rebâtir la civilisation à partir de zéro avec son ami Senku !</p>
+  <li class="comedie">Gintama</li>
+    <p class="hidden comedie">Dans un Japon mi-médiéval, mi-futuriste, des extraterrestres, les Amanto, débarquent sur Terre. </p>
+  <li class="comedie action">Nickie Larson</li>
+    <p class="hidden comedie action">Nicky Larson, garde du corps et détective privé, ne peut s'empêcher de séduire toutes les femmes qui croisent sa route.</p>
+  <li class="action comedie">Dan Da Dan</li>
+    <p class="hidden comedie action">Deux lycéens sont en désaccord : d'un côté Momo Ayase croit aux fantômes mais pas aux extraterrestres, alors que son camarade Ken Takakura croit le contraire.</p>
+  <li class="action aventure">Sailor Moon</li>  
+    <p class="hidden action aventure">Une collégienne de 14 ans nommée Bunny Tsukino découvre qu'elle a été élue pour devenir la justicière Sailor Moon. </p>
+</ul>
+</div>
 
 
-
-    <!-- <section>
-
-      for(i=1; i<200; i++){
-      console.log(i)
-      }
-
-                                            FIZZBUZZ
-    <section>
-       <script> 
-        for(let i=1; i<200; i++) {
-          if (i%3 === 0 && i%5 === 0) {
-            console.log("fizzbuzz")
-          } else if (i%3 === 0) {
-            console.log ("Fizz")
-          } else if (i%5 === 0) {
-            console.log ("Buzz")
-          } else {
-            console.log (i)
-
-          }
-        }
-      </script> -->
-    <!-- </section> -->
-
-
-
-
-
-
-
-<!-- </script> -->
 
   </section>
 
-
+    </main>
   </body>
 
   <script src="javascript/exercice.js"></script>
 </html>
+
+

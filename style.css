@@ -14,7 +14,7 @@ a {
 }
 
 .parallax { /* parallax = nom de l'effet des 6 effets ci apres pour l'image de fond */
-    /*background-image: url(image/fondDuSite.jpeg); /*defini l'image de fond*/
+    background-image: url(image/fondDuSite.jpeg); /*defini l'image de fond*/
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,13 +50,131 @@ ul li a{
     transition: color 0.3s;
 
 }
-#headerLogo{
+.headerLogo{
     width: 178px;
 }
+
+/*--------------------------- Menu BURGER -----------------*/
+.menuBurger{
+    display: none;
+}
+
+.navLien li a{
+    color: black;
+}
+
+.menuBurger ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 0;
+    overflow: hidden;
+    transition: .4s cubic-bezier(.77, 0, .18, 1);
+}
+
+.menuBurger{
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    height: 50px;
+}
+.menuBurger::before,
+.menuBurger::after{
+    content: '';
+    width: 100%;
+    height: 50%;
+    background-color: #EAFBFF;
+}
+.menuBurger::after{
+    background-color: #208FF9;
+}
+
+.menuBurger nav{
+    top: 0;
+    z-index: 1;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation{
+    border-radius: 8px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 5px;
+    line-height: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuBurger ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 0;
+    overflow: hidden;
+    transition: .4s cubic-bezier(.77,0,.18,1);
+}
+
+.menuBurger.active ul{
+    width: 420px;
+    margin-right: 20px;
+}
+
+a{
+    color: #888;
+    text-decoration: none;
+    transition: .3s;
+}
+a:hover{
+    color: #3C9DFB;
+}
+.basculant{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 48px;
+    padding: 14px 5px;
+    cursor: pointer;
+}
+.menuBurger:not(.active) .nav-toogler{
+    margin-left: -10px;
+}
+.basculant::before,
+.basculant::after{
+    content: '';
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #3C9DFB;
+    transition: .4s cubic-bezier(.77,0,.18,1);
+}
+.basculant::after {
+    margin-top: 10px;
+}
+.menuBurger.active .basculant::before,
+.menuBurger.active .basculant::after{
+    position: absolute;
+    top: 50%;
+    background-color: #3C9DFB;
+    transform: rotate(135deg);
+}
+.menuBurger.active .basculant::after {
+    transform: rotate(-135deg);
+    margin-top: 0;
+}
+
+
+
 /*------------------------------------------------------- FIN HEADER --------------------------------------------------*/
 
 main {
-    padding-top: 100px;
+    padding-top: 103px;
 }
 
 .section1{
@@ -166,6 +284,7 @@ a:hover{
     color: red;
     transform: scale(2);
 }
+
 /* ------------------------------------------------------ ANIMATED BOX --------------------------------------------- */
         /* Définition de l’animation */
     @keyframes changeColor {
@@ -234,3 +353,212 @@ a:hover{
     color: #e74c3c;
 }
 /* ----------------------------------------------------- FIN POP UP ------------------------------------*/
+
+/* --------------------------------------------------- Check box ------------------------------------*/
+
+.section{
+    width: 600px;
+    padding: 20px;
+    background: gray;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.petit-texte {
+    font-size: 14px;
+    color: black;
+}
+
+.toggle-desc {
+    display: none;
+}
+
+.arrow-container {
+    margin:  15px 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.arrow-down{
+    font-size: 25px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.description-box{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    /*ease-out = effet de ralentissement*/
+    background: grey;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin: 10px 0;
+}
+
+.textBoxBlack{
+    color: #111;
+}
+
+.toggle-desc:checked ~ .description-box{
+    max-height: 300px;
+    padding: 15px;
+}
+
+.toggle-desc:checked ~ .arrow-container .arrow-down{
+    transform: scale(1.5);
+}
+
+
+/*---------------------------------------------- Fin Check box -----------------------*/
+
+.fade-in{
+    width: 500px;
+    margin-top: 10em;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: Maxime 10s ease forwards;
+}
+
+.fadeinColor{
+    color: black
+}
+
+@keyframes Maxime {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------- ZOOM ROtatte in -----------------------*/
+
+.zoom-rotate-in{
+    opacity: 0;
+    transform: scale(0.5) rotate(-30deg);
+    animation: zoomRotateIn 2s cubic-bezier(.68, -0.55, .27, 1.55) forwards;
+}
+
+@keyframes zoomRotateIn {
+    to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    }
+
+}
+/*animation CARTOON avec bouton (effet bounce)*/
+
+.bounce{
+    display : inline-block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-200px);
+    }
+    40% {
+        transform: translateY(-140px);
+    }
+    60% {
+        transform: translateY(-70px);
+    }
+    80% {
+        transform: translateY(-35px);
+    }
+}
+
+/*animation SHAKE avec bouton */
+
+.shake{
+    display: inline-block;
+    animation: shake 0.6s cubic-bezier(.36, .07, .19, .97) both;
+}
+@keyframes shake {
+    10%, 90%{transform: translateX(-5px);}
+    20%, 80%{transform: translateX(10px);}
+    30%, 50%, 70%{transform: translateX(-20px);}
+    40%, 60%{transform: translateX(20px);}
+}
+
+
+/* -------------------------- Responsif -----------------------------*/
+
+@media screen and (max-width:768px){
+    .headerBox{
+        display: none;
+    }
+    .menuBurger{
+        display: block;
+    }
+}
+
+/* <--------------------- Filtrage par catégorie --> */
+
+
+.hidden {
+    display: none;
+}
+
+.choiceBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-top: 5em;
+}
+#actionBtn{
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 45px;
+
+}
+#aventureBtn{
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 45px;
+}
+#comedieBtn{
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 45px;
+}
+#allBtn{
+    width: 100px;
+    border-radius: 45px;
+}
+.mangaSelection{
+    width: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+#listeMangas{
+    width: auto;
+    background-color: rgba(224, 220, 220, 0.876);
+    box-shadow: rgba(0,0,0,0.05);
+    opacity: 0.5;
+    column-count: 3; 
+    column-gap: 5em; 
+    margin-top: 5px;
+}
+
+#listeMangas li {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 45px;
+    margin: 0.5em 0;
+    padding: 1em;
+    box-shadow: rgba(0,0,0,0.05);
+
+}
