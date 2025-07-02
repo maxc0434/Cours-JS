@@ -408,54 +408,107 @@
 //#endregion Intro POO
 // ---------------------------------------------FIN INTRODUCTION A LA Programmation Orienté Objet --------------
 
+// ------------boucle For Each ------------------
 
-let actionsMangas = document.getElementsByClassName("action");
-let aventuresMangas = document.getElementsByClassName("aventure");
-let comedieMangas = document.getElementsByClassName("comedie");
-let allMangas = document.getElementsByClassName("action" + "aventure" + "comedie");
+// let prenoms = ["Maxime", "Karim", "Sabrina", "Arnaud", "Julen"];
+//    prenoms.forEach(function(prenom){
+//     alert("bonjour " + prenom);
+//    });
 
-document.getElementById('actionBtn').onclick = function hide(){
-    for (let i = 0; i < aventuresMangas.length; i++) {
-        aventuresMangas[i].classList.add("hidden");
-    }
-    for (let i = 0; i < comedieMangas.length; i++) {
-        comedieMangas[i].classList.add("hidden");
-    }
-    for (let i = 0; i < actionsMangas.length; i++) {
-        actionsMangas[i].classList.remove("hidden");
-    }
-  }
+// let prenoms = ["Maxime", "Karim", "Sabrina", "Arnaud", "Julen"];
+// prenoms.forEach(prenom => {
+//     alert("bonjour" + prenom)
+// })
 
-  document.getElementById('aventureBtn').onclick = function hide(){
-    for (let i = 0; i < actionsMangas.length; i++) {
-        actionsMangas[i].classList.add("hidden");
-    }
-    for (let i = 0; i < comedieMangas.length; i++) {
-        comedieMangas[i].classList.add("hidden");
-    }
-    for (let i = 0; i < aventuresMangas.length; i++) {
-        aventuresMangas[i].classList.remove("hidden");
-    }
-  }
-  document.getElementById('comedieBtn').onclick = function hide(){
-    for (let i = 0; i < actionsMangas.length; i++) {
-        actionsMangas[i].classList.add("hidden");
-    }
-    for (let i = 0; i < aventuresMangas.length; i++) {
-        aventuresMangas[i].classList.add("hidden");
-    }
-    for (let i = 0; i < comedieMangas.length; i++) {
-        comedieMangas[i].classList.remove("hidden");
-    }
-  }
-  document.getElementById('allBtn').onclick = function reveal(){
-    for (let i = 0; i < comedieMangas.length; i++) {
-        comedieMangas[i].classList.remove("hidden");
-    }
-    for (let i = 0; i < aventuresMangas.length; i++) {
-        aventuresMangas[i].classList.remove("hidden");
-    }
-    for (let i = 0; i < actionsMangas.length; i++) {
-        actionsMangas[i].classList.remove("hidden");
-    }
-  }
+
+// ---------------------------------------- Filtrage par classe ------------------------------
+//#region filtrage
+
+// ----- 1ere solution -----
+
+// let actionsMangas = document.getElementsByClassName("action");
+// let aventuresMangas = document.getElementsByClassName("aventure");
+// let comedieMangas = document.getElementsByClassName("comedie");
+// let allMangas = document.getElementsByClassName("action" + "aventure" + "comedie");
+
+// document.getElementById('actionBtn').onclick = function hide(){
+//     for (let i = 0; i < aventuresMangas.length; i++) {
+//         aventuresMangas[i].classList.add("hidden");
+//     }
+//     for (let i = 0; i < comedieMangas.length; i++) {
+//         comedieMangas[i].classList.add("hidden");
+//     }
+//     for (let i = 0; i < actionsMangas.length; i++) {
+//         actionsMangas[i].classList.remove("hidden");
+//     }
+//   }
+//   document.getElementById('aventureBtn').onclick = function hide(){
+//     for (let i = 0; i < actionsMangas.length; i++) {
+//         actionsMangas[i].classList.add("hidden");
+//     }
+//     for (let i = 0; i < comedieMangas.length; i++) {
+//         comedieMangas[i].classList.add("hidden");
+//     }
+//     for (let i = 0; i < aventuresMangas.length; i++) {
+//         aventuresMangas[i].classList.remove("hidden");
+//     }
+//   }
+//   document.getElementById('comedieBtn').onclick = function hide(){
+//     for (let i = 0; i < actionsMangas.length; i++) {
+//         actionsMangas[i].classList.add("hidden");
+//     }
+//     for (let i = 0; i < aventuresMangas.length; i++) {
+//         aventuresMangas[i].classList.add("hidden");
+//     }
+//     for (let i = 0; i < comedieMangas.length; i++) {
+//         comedieMangas[i].classList.remove("hidden");
+//     }
+//   }
+//   document.getElementById('allBtn').onclick = function reveal(){
+//     for (let i = 0; i < comedieMangas.length; i++) {
+//         comedieMangas[i].classList.remove("hidden");
+//     }
+//     for (let i = 0; i < aventuresMangas.length; i++) {
+//         aventuresMangas[i].classList.remove("hidden");
+//     }
+//     for (let i = 0; i < actionsMangas.length; i++) {
+//         actionsMangas[i].classList.remove("hidden");
+//     }
+//   }
+//   hide();
+
+
+// --------- 2eme solution
+
+// function filtrage(categorie){
+//     let mangas = document.querySelectorAll("#Mangas li");
+
+//     mangas.forEach(manga => {
+//         if (categorie === "all" || manga.classList.contains(categorie)) {
+//             manga.classList.remove("hidden");
+//         }
+//         else{
+//             manga.classList.add("hidden");     
+//         }
+//     });
+// }
+
+
+// --------------Essai boucle For Each
+
+function filtreRole (categorie){
+    const roles = document.querySelectorAll("#membresEquipage article");
+
+    roles.forEach(role => {
+        if (categorie === "all" || role.classList.contains(categorie)) {
+            role.classList.remove("hidden");
+        }
+        else{
+            role.classList.add("hidden");
+        }
+    })
+}
+filtreRole();
+
+  //#endregion filtrage
+//   -------------------------------------- Fin Filtrage par categorie-----------------------

@@ -248,7 +248,9 @@
 
       <!-- --------------------- Filtrage par catégorie -->
 
-<div class="choiceBtn">
+<!-- 1ere solution -->
+
+<!-- <div class="choiceBtn">
   <h2>Quelle catégorie de Mangas voudrais-tu lire?</h2>
 <button id="actionBtn"> Action </button>
 <button id="aventureBtn"> Aventure </button>
@@ -281,9 +283,78 @@
   <li class="action aventure">Sailor Moon</li>  
     <p class="hidden action aventure">Une collégienne de 14 ans nommée Bunny Tsukino découvre qu'elle a été élue pour devenir la justicière Sailor Moon. </p>
 </ul>
-</div>
+</div> -->
+
+<!-- 2eme solution -->
+
+<!-- <section>
+  <label for="categorie-Selection">Filtrer par Categorie</label>
+  <select id="categorie-Selection" onchange="filtrage(this.value)">
+    <option value="all"> Toute la collection</option>
+    <option value="action">Action</option>
+    <option value="aventure">Aventure</option>
+    <option value="comedie">Comédie</option>
+  </select>
+</section>
+
+<section id="Mangas">
+  <li class="action">One Piece</li>
+    <p class="action">L'histoire d'un jeune garçon qui veut devenir le roi des pirates!</p>
+  <li class="action">Bleach</li>
+    <p class=" action">Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits.</p>
+  <li class="action">DragonBall Z</li>
+    <p class=" action">L'histoire d'un homme qui veut être le meilleur à la bagarre!</p>
+  <li class="aventure">Naruto</li>
+    <p class=" aventure">L'histoire d'un jeune garçon qui veut devenir le meilleur ninja</p>
+  <li class="aventure">Hunter x Hunter</li>
+    <p class=" aventure">Abandonné par son père qui est un Hunter, à la fois un aventurier et un chasseur de primes, Gon décide à l'âge de 12 ans de partir pour devenir un Hunter.</p>
+  <li class="aventure">Fairy Tail</li>
+    <p class=" aventure">Lucy, une jeune fille, rêve de devenir magicienne.</p>
+  <li class="aventure">Dr Stone</li>
+    <p class=" aventure">l'humanité entière est transformée en pierre ! Des milliers d'années plus tard, à son réveil, il décide de rebâtir la civilisation à partir de zéro avec son ami Senku !</p>
+  <li class="comedie">Gintama</li>
+    <p class="comedie">Dans un Japon mi-médiéval, mi-futuriste, des extraterrestres, les Amanto, débarquent sur Terre. </p>
+  <li class="comedie action">Nickie Larson</li>
+    <p class="comedie action">Nicky Larson, garde du corps et détective privé, ne peut s'empêcher de séduire toutes les femmes qui croisent sa route.</p>
+  <li class="action comedie">Dan Da Dan</li>
+    <p class="comedie action">Deux lycéens sont en désaccord : d'un côté Momo Ayase croit aux fantômes mais pas aux extraterrestres, alors que son camarade Ken Takakura croit le contraire.</p>
+  <li class="action aventure">Sailor Moon</li>  
+    <p class="action aventure">Une collégienne de 14 ans nommée Bunny Tsukino découvre qu'elle a été élue pour devenir la justicière Sailor Moon. </p>
+ 
+
+</section> -->
 
 
+<!-- // --------------Essai boucle For Each ----- -->
+
+<section>
+
+  <label for="rolEquipage">Filtrer par role</label>
+  <select id="rolEquipage" onchange="filtreRole(this.value)">
+    <option value="commandement">Les hauts gradés</option>
+    <option value="combattants">Les combattants</option>
+    <option value="mecanos">Les mécaniciens</option>
+    <option value="healer">Les healers</option>
+    <option value="support">Les soutiens</option>
+    <option value="all">Tous les membres</option>
+  </select>
+
+  <section id="membresEquipage">
+    <article class="commandement combattants"> Luffy </article>
+    <article class="combattants"> Zoro </article>
+    <article class="combattants"> Sanji </article>
+    <article class="healer support"> Chopper </article>
+    <article class="mecanos"> Franky </article>
+    <article class="support"> Nami </article>
+    <article class="support"> Robin </article>
+    <article class="combattants"> Brook </article>
+    <article class="mecanos"> Usopp </article>
+    <article class="commandement combattants"> Jinbe </article>
+  </section>
+
+
+
+</section>
 
   </section>
 

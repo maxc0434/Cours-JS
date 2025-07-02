@@ -506,10 +506,17 @@ a:hover{
 /* <--------------------- Filtrage par catégorie --> */
 
 
-.hidden {
+/* #Mangas li.hidden {
+    display: none;
+} */
+
+#membresEquipage article.hidden{
     display: none;
 }
 
+/* .hidden {
+    display: none;
+} */
 .choiceBtn {
     display: flex;
     flex-direction: column;
@@ -520,6 +527,7 @@ a:hover{
 }
 #actionBtn{
     width: 100px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 45px;
 
@@ -551,6 +559,7 @@ a:hover{
     column-count: 3; 
     column-gap: 5em; 
     margin-top: 5px;
+
 }
 
 #listeMangas li {
