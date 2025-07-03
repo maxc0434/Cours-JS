@@ -496,19 +496,22 @@
 
 // --------------Essai boucle For Each
 
-function filtreRole (categorie){
-    const roles = document.querySelectorAll("#membresEquipage article");
+// function filtreRole (categorie){
+//     const roles = document.querySelectorAll("#membresEquipage article");
 
-    roles.forEach(role => {
-        if (categorie === "all" || role.classList.contains(categorie)) {
-            role.classList.remove("hidden");
-        }
-        else{
-            role.classList.add("hidden");
-        }
-    })
-}
-filtreRole();
+//     roles.forEach(role => {
+//         if (categorie === "all" || role.classList.contains(categorie)) {
+//             role.classList.remove("hidden");
+//         }
+//         else{
+//             role.classList.add("hidden");
+//         }
+//     })
+// }
+// filtreRole();
 
   //#endregion filtrage
 //   -------------------------------------- Fin Filtrage par categorie-----------------------
+
+
+

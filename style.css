@@ -514,9 +514,9 @@ a:hover{
     display: none;
 }
 
-/* .hidden {
+.hidden {
     display: none;
-} */
+}
 .choiceBtn {
     display: flex;
     flex-direction: column;

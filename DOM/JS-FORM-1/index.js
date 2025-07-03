@@ -35,12 +35,12 @@
 
 // ----------------------------- SPOILER AFFICHER / CACHER ---------------------------------------
 
-let spoilers = document.getElementsByClassName("spoiler");
-document.getElementById('mon-bouton').onclick = function hide(){
-    for (let i = 0; i < spoilers.length; i++) {
-    spoilers[i].classList.add("hidden");
-    }
-}
+// let spoilers = document.getElementsByClassName("spoiler");
+// document.getElementById('mon-bouton').onclick = function hide(){
+//     for (let i = 0; i < spoilers.length; i++) {
+//     spoilers[i].classList.add("hidden");
+//     }
+// }
 // ----------------------------- FIN SPOILER AFFICHER / CACHER ---------------------------------------
 
 
@@ -61,3 +61,60 @@ document.getElementById('mon-bouton').onclick = function hide(){
 
 // --------------------------- FIN Surbrillance au clic ---------------------------------------------
 
+//  ------------- Changer la couleur du parent au clic 
+
+// ----------------- colore au clic
+// let boutons = document.getElementsByTagName('button');
+// for (let i = 0; i < boutons.length; i++) {
+//     boutons[i].onclick = function(event) {
+//         event.target.parentNode.style.backgroundColor = 'yellow';
+//     }
+// }
+
+//  ----------------------colore et decolore au clic
+
+// let boutons = document.getElementsByTagName('button');
+// for (let i = 0; i < boutons.length; i++) {
+//     boutons[i].onclick = function(event) {
+//         let parent = event.target.parentNode;
+//         if (parent.style.backgroundColor === 'yellow'){
+//             parent.style.backgroundColor = "";
+//         }
+//         else{
+//             parent.style.backgroundColor = 'yellow';        
+//         }   
+//     };
+// }
+
+// ---------------------colore parent ET grand parent et decolore au clic
+
+// let boutons = document.getElementsByTagName('button');
+//     for (let i = 0; i < boutons.length; i++) {
+//         boutons[i].onclick = function(event) {
+//         let parent = event.target.parentNode;
+//         let grandParent = parent.parentNode;  
+        
+//     if (parent.style.backgroundColor === 'yellow' && grandParent.style.backgroundColor === 'blue') {
+//         parent.style.backgroundColor = "";
+//         grandParent.style.backgroundColor = "";
+//     }
+//     else {
+//         parent.style.backgroundColor = "yellow"
+//         grandParent.style.backgroundColor = "blue"
+//     }
+//     };
+//     }
+
+// ------bouton remise a zero -------
+
+let champs= document.createElement('input');
+document.getElementById("sectionTestJs").appendChild(champs);
+
+let bouton = document.createElement('button');
+let textBouton = document.createTextNode("RAZ");
+bouton.appendChild(textBouton);
+document.getElementById("sectionTestJs").appendChild(bouton);
+
+bouton.onclick = function() {
+    champs.value = "";
+    };
