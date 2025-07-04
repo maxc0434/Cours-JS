@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
 </head>
 <body>
     <!-- ------------------------------- RECUPERER des Valeurs via JS-------------------- -->
@@ -72,11 +73,28 @@
   <button>Mon 3ème Bouton</button>
 </div> -->
 
+<!-- Connexion a une api. Copier/coller le lien du site proposant les composants dans le head et dans une balise script, puis récuperer le code -->
 
-<section id="sectionTestJs">
+<script>
+    swal({
+  title: "Are you sure?",
+  text: "Once deleted, you will not be able to recover this imaginary file!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Poof! Your imaginary file has been deleted!", {
+      icon: "success",
+    });
+  } else {
+    swal("Your imaginary file is safe!");
+  }
+});
+</script>
 
-
-</section>
+<!--  Fin Connexion API -->
 
 
 </body>

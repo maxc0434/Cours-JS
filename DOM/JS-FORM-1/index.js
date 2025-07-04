@@ -107,14 +107,16 @@
 
 // ------bouton remise a zero -------
 
-let champs= document.createElement('input');
-document.getElementById("sectionTestJs").appendChild(champs);
+// let champs= document.createElement('input');
+// document.getElementById("sectionTestJs").appendChild(champs);
 
-let bouton = document.createElement('button');
-let textBouton = document.createTextNode("RAZ");
-bouton.appendChild(textBouton);
-document.getElementById("sectionTestJs").appendChild(bouton);
+// let bouton = document.createElement('button');
+// let textBouton = document.createTextNode("RAZ");
+// bouton.appendChild(textBouton);
+// document.getElementById("sectionTestJs").appendChild(bouton);
 
-bouton.onclick = function() {
-    champs.value = "";
-    };
+// bouton.onclick = function() {
+//     champs.value = "";
+//     };
+
+
