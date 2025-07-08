@@ -1,3 +1,30 @@
-.libraryProposal{
+/* .libraryProposal{
     width: 500px;
+}
+
+.hidden{
+    display: none;
+} */
+
+.carouselSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(/image/carousel_background.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 100vh;
+}
+
+.carouselDiv{
+    display: flex;
+
+}
+.carouselImage{
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+    box-shadow: 0px 4px 10px #888;
+    border-radius: 45px;
+    margin-top: 8em;
 }
