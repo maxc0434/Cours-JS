@@ -1,5 +1,7 @@
 //----------------------------  Accordeon  ------------------------------
 
+// const { createElement } = require("react");
+
 // classList.toggle permet d’ajouter ou de retirer une classe CSS sur un élément en fonction de si elle est initialement présente ou non.
 // document.getElementById('OpTitle').onclick = function hide(){
 //     let synopsis = document.getElementsByClassName("SynopsiOP");
@@ -49,7 +51,7 @@
 //     // setTimeout = au bout de tant de ms, on change l'image
 //     setTimeout(()=>{
 //     // rappeler img.src pour "mettre a jour" la nouvelle image au clic qui revient à opacité normale
-//         img.src = pictures[index];
+        // img.src = pictures[index];
 //         img.style.opacity = 1;
 //     }, 150);
 // };
@@ -64,29 +66,77 @@
 // };
 // carousel();
 
+// ----------------------------------------- Galerie Video SIMPLE ----------------------------
 
-// -------------------------------------------- Galerie Video-----------------------------------
-
-const videosGalery = [
-    {
-        titre: ,
-        vignette: ,
-        url: ,
-    }
-
-    {
-        titre: ,
-        vignette: ,
-        url: ,
-    }
-
-    {
-        titre: ,
-        vignette: ,
-        url: ,
-    }
+const extraitVideo = [
+    "https://www.youtube.com/embed/?v=UYYwaFy05-U&list=PLMl4WmJENZ56p7DQRK88w3hEsVfOrKXjJ",
+    "https://www.youtube.com/embed/VmiDFH4H2dM",
+    "https://www.youtube.com/embed/dsPP_lvXFmg",
 ];
 
+let video = document.getElementById("videoDiv");
+let buttons = document.getElementsByClassName("extrait");
 
-let playVideos = document.getElementById("videosGalery");
+function showVideo(i) {
+    return function(){
+        video.innerHTML = `<iframe width="100%" height="100%" src="${extraitVideo[i]}" frameborder="0" allowfullscreen></iframe>`;
+    }
+};
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = showVideo(i);
+};
+
+// -------------------------------------------- Galerie Video AVANCEE -----------------------------------
+
+
+
+// // Creation d'un tableau avec les éléments à l'interieur
+//     const videos = [
+//     {
+//         titre: "Diner de con",
+//         vignette: "https://img.youtube.com/vi/UYYwaFy05-U/hqdefault.jpg",
+//         url: "https://www.youtube.com/embed/?v=UYYwaFy05-U&list=PLMl4WmJENZ56p7DQRK88w3hEsVfOrKXjJ",
+//     },
+
+//     {
+//         titre: "Tontons flingueurs",
+//         vignette: "https://img.youtube.com/vi/VmiDFH4H2dM/hqdefault.jpg",
+//         url: "https://www.youtube.com/embed/VmiDFH4H2dM",
+//     },
+
+//     {
+//         titre: "Lebowski",
+//         vignette: "https://img.youtube.com/vi/dsPP_lvXFmg/hqdefault.jpg",
+//         url: "https://www.youtube.com/embed/dsPP_lvXFmg",
+//     },
+// ];
+
+// //creation des constantes qui joignent le HTML et JS
+// let galery = document.getElementById("galery");
+// let videosContainer = document.getElementById("videosContainer");
+
+
+// //  Boucle for pour creer en premier lieu generer les miniatures à partir du tableau
+// for ( let i=0; i < videos.length; i++){
+//     let img = document.createElement('img');
+//     img.src = videos[i].vignette;
+//     img.alt = videos[i].titre;
+//     img.className = 'vignette';
+
+// // creer un evenement pour lire la video en rapport avec la miniature (===> onclick)
+//     img.onclick = function(){
+//         showVideo(i);
+//     };
+// // creation d'un enfant dans la div id=galery en fonction du nombre d'elements présent du tableau 
+//     galery.appendChild(img);
+// }
+
+
+// // creation de la fonction qui me permet de visoionner la video en insérant une balise iframe
+// function showVideo(index){
+//     videosContainer.innerHTML = 
+//     `<iframe width="100%" height="100%" src="${videos[index].url}" frameborder="0" allowfullscreen></iframe>`;
+// }
+// showVideo(0);
 
