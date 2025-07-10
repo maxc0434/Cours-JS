@@ -640,25 +640,97 @@
 
 // ----------------------------- Création de PLUSIEURS Classes -------------
 
-class Armes {
-    constructor(epee, hache, arc){
-        this.epee = epee;
-        this.hache = hache;
-        this.arc = arc;
+// class Armes {
+//     constructor(epee, hache, arc){
+//         this.epee = epee;
+//         this.hache = hache;
+//         this.arc = arc;
+//     };
+//     afficherArmes(){
+//         return `une ${this.epee}, une ${this.hache}, un ${this.arc} `;
+//     };
+// };
+
+
+// class Sorts {
+//     constructor(tempete_de_foudre, pluie_de_grele, mur_de_feu){
+//         this.tempete_de_foudre = tempete_de_foudre;
+//         this.pluie_de_grele = pluie_de_grele;
+//         this.mur_de_feu = mur_de_feu;
+//     };
+//     afficherSorts(){
+//         return `une ${this.tempete_de_foudre}, une ${this.pluie_de_grele}, un ${this.mur_de_feu} `;
+//     };
+// };
+// let weapons = new Armes("epee", "hache", "arc");
+// console.log(weapons.afficherArmes());
+
+// let spells = new Sorts("tempete_de_foudre", "pluie_de_grele", "mur_de_feu");
+// console.log(spells.afficherSorts());
+
+// ----------------------------------------- Classe Personnage ----------------------------------
+class Personnages {
+    constructor(nom, role, vie, attributs, pointAttributs, pouvoir){
+        this.nom = nom;
+        this.role = role;
+        this.vie = vie;
+        this.attributs = attributs;
+        this.pointAttributs = pointAttributs
+        this.pouvoir = pouvoir;
+
     };
-    afficherArmes(){
-        return `une ${this.epee}, une ${this.hache}, un ${this.arc} `;
+    afficherPersonnages(){
+        return ` ${this.nom}, un ${this.role}, ${this.vie}, ${this.attributs}, ${this.pointAttributs}, ${this.pouvoir}`;
+    }; 
+};
+
+
+class Barbare extends Personnages {
+    constructor(nom, role, vie, attributs, pointAttributs, pouvoir, special){
+        super(nom, role, vie, attributs, pointAttributs, pouvoir);
+        this.special = special;
+    };
+    afficherBarbare(){
+        return `${super.afficherPersonnages()} et une ${this.special}`;
+    }; 
+};
+
+class Archer extends Personnages {
+    constructor(nom, role, vie, attributs, pointAttributs, pouvoir){
+        super(nom, role, vie, attributs, pointAttributs, pouvoir);
+    };
+    afficherArcher(){
+        return `${super.afficherPersonnages()}`
+    };
+};
+
+class Necromancien extends Personnages {
+    constructor(nom, role, vie, attributs, pointAttributs, pouvoir){
+        super(nom, role, vie, attributs, pointAttributs, pouvoir);
+    };
+    afficherNecromancien(){
+        return `${super.afficherPersonnages()}`
+    };
+};
+
+class Sorcier extends Personnages {
+    constructor(nom, role, vie, attributs, pointAttributs, pouvoir, pouvoirSecondaire, pouvoirTertiaire){
+        super(nom, role, vie, attributs, pointAttributs, pouvoir);
+        this.pouvoirSecondaire = pouvoirSecondaire;
+        this.pouvoirTertiaire = pouvoirTertiaire;
+    };
+    afficherSorcier(){
+        return `${super.afficherPersonnages()}, et un ${this.pouvoirSecondaire}, et un ${this.pouvoirTertiaire}`;
     };
 };
 
 
-class Sorts {
-    constructor(tempete_de_foudre, pluie_de_grele, mur_de_feu){
-        this.tempete_de_foudre = tempete_de_foudre;
-        this.pluie_de_grele = pluie_de_grele;
-        this.mur_de_feu = mur_de_feu
-    };
-    afficherSorts(){
-        return `une ${this.tempete_de_foudre}, une ${this.pluie_de_grele}, un ${this.mur_de_feu} `;
-    };
-};
+let char1 = new Barbare("Conan", "barbare", "2000", "Force", "800", "Berserker", "Armes a deux mains");
+let char2 = new Archer("Robin", "archer", "1500", "Dexterité", "1000", "Oeil de Faucon");
+let char3 = new Necromancien("Voldo", "necromancien", "1000", "intelligence", "1500", "Armee de Morts" )
+let char4 = new Sorcier("Severus", "sorcier", "800", "Mana", "1500", "boule de feu", "mur de glace", "vague de foudre" )
+
+console.log(char1.afficherBarbare());
+console.log(char2.afficherArcher());
+console.log(char3.afficherNecromancien());
+console.log(char4.afficherSorcier());
