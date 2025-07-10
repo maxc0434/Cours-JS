@@ -408,7 +408,13 @@
 //#endregion Intro POO
 // ---------------------------------------------FIN INTRODUCTION A LA Programmation Orienté Objet --------------
 
+
+
+
+
+
 // ------------boucle For Each ------------------
+//#region ForEach
 
 // let prenoms = ["Maxime", "Karim", "Sabrina", "Arnaud", "Julen"];
 //    prenoms.forEach(function(prenom){
@@ -419,10 +425,16 @@
 // prenoms.forEach(prenom => {
 //     alert("bonjour" + prenom)
 // })
+//#endregion ForEach
+
+
+
+
+
 
 
 // ---------------------------------------- Filtrage par classe ------------------------------
-//#region filtrage
+//#region Filtrage
 
 // ----- 1ere solution -----
 
@@ -510,8 +522,143 @@
 // }
 // filtreRole();
 
-  //#endregion filtrage
+  //#endregion Filtrage
 //   -------------------------------------- Fin Filtrage par categorie-----------------------
 
 
 
+
+
+
+
+// ------------------------------------- Feux tricolore ---------------------------------
+//#region Feux tricolore
+
+// let lights = document.querySelectorAll('.light'); // je récupère toutes les elements html qui ont la class .light
+// let currentIndex = 0; // lumière allumée en premiere 
+
+// function changeLight() {
+//   for (let i = 0; i < lights.length; i++) { //je parcours les lumières une par une
+//     lights[i].classList.remove('active') // retire classe active à toutes les lumières, donc toutes eteintes
+//   }
+//    lights[currentIndex].classList.add('active');//ajoute la classe active, allume la lumière de l'index en cours
+//    currentIndex++; //passe à l'index suivant donc à la lumiere suivante
+//    if (currentIndex >= lights.length) { //si je dépasse la derniere lumière ...
+//     currentIndex = 0; // ...je reviens à la première lumière
+//    }
+
+// }
+
+// setInterval(changeLight, 2000); //dans setInterval je rappelle la fonction changeLight et toutes les deux secondes ça change de couleur
+
+
+//#endregion Feux Tricolore
+
+
+
+
+
+// ---------------------------------- Modale V1 ---------------------------------------
+//#region Creer Modale
+
+
+// let modale = document.getElementById("modale");
+// document.getElementById("openModale").onclick = () => modale.classList.add("active");
+// document.getElementById("closeModale").onclick = () => modale.classList.remove("active");
+// window.onclick = (e) => {
+//     if (e.target === modale) modale.classList.remove("active");
+// };
+
+// ----------------------------------- Modale V2----------------------------------------
+
+// let modale = document.getElementById("modale");
+// let openModale = document.getElementById("openModale");
+// let closeModale = document.getElementById("closeModale");
+
+// openModale.addEventListener("click", () => {
+//     modale.style.display = "block";
+// });
+// closeModale.addEventListener("click", () => {
+//     modale.style.display = "none";
+// });
+// window.addEventListener("click", (e) => {
+//     if (e.target === modale){
+//         modale.style.display = "none";
+//     } 
+// });
+
+//#endregion Creer Modale
+
+
+
+
+
+// ---------------------- Palindrome ------------------
+//#region Palindrome
+
+// function palindrome (string) {
+//     return string === string.split("").reverse().join("")
+// };
+// let mot = prompt("tapez votre mot");
+// let motPalindrome = palindrome (mot);
+// console.log(motPalindrome);
+
+//#endregion Palindrome
+
+
+
+
+
+
+// ------------------- Exercice des Classes --------------
+//#region Classes
+
+// class SommeNombres { // creation de la classe.
+//     constructor(listeNombres){ // obligation de l'appel du constructeur avec son paramètre.
+//         this.numberList = listeNombres; // this."variable" (qui est obligatoire quand il y a un constructeur) permet de rappeler la variable n'importe ou dans l'objet dans laquelle elle est instancié, et on rappelle le paramètre de la classe.
+//         };
+//         calculerSomme() { //ceci est une fonction, mais comme on est dans une classe, pas besoin d'ecrire function devant.
+//             let somme = 0;
+//             for (let nombre of this.numberList) { //parcourir  1 nombre de la liste parmi tous les nombres de cette liste.
+//                 somme += nombre; // valeur de gauche s'additionne à la valeur de droite et creer une nouvelle "let somme".
+//             };
+//             return somme; // auparavant on calculait la somme, avec return le resultat du calcul nous est restitué.
+//         };
+//         afficherResultat() {
+//             const result = this.calculerSomme(); // rappel d'un objet instancié dans la classe. 
+//             console.log(`la somme des nombres de la liste est : ${result}`); //on affiche le resultat dans la console. pour le rappeler une constante/ou variable dans une chaine de caractère il faut les backticks et encadrer constante/variable par ${}  
+//         };
+// };
+
+// // utilisation de la class
+// const listeNombres = [1, 2, 3, 4, 5]; //on établie la liste de nombre
+// const resultNumbers = new SommeNombres(listeNombres); //creer une variable qui va faire une nouvelle instanciation de classe 
+// resultNumbers.afficherResultat();
+
+//#endregionClasses
+//------------------------------- Exercice des Classes -----------------
+
+// ----------------------------- Création de PLUSIEURS Classes -------------
+
+class Armes {
+    constructor(epee, hache, arc){
+        this.epee = epee;
+        this.hache = hache;
+        this.arc = arc;
+    };
+    afficherArmes(){
+        return `une ${this.epee}, une ${this.hache}, un ${this.arc} `;
+    };
+};
+
+
+class Sorts {
+    constructor(tempete_de_foudre, pluie_de_grele, mur_de_feu){
+        this.tempete_de_foudre = tempete_de_foudre;
+        this.pluie_de_grele = pluie_de_grele;
+        this.mur_de_feu = mur_de_feu
+    };
+    afficherSorts(){
+        return `une ${this.tempete_de_foudre}, une ${this.pluie_de_grele}, un ${this.mur_de_feu} `;
+    };
+};
